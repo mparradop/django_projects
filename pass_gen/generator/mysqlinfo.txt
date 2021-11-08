@@ -1,0 +1,12 @@
+ssh -i .\Documents\vm_keys\private_ssh-key-2021-07-27.key ubuntu@140.238.156.31
+
+
+mysql server connection
+
+name: ubnt-server
+hostname. 140.238.156.31
+user. ubuntu
+ssh keys C:\Users\Mauricio\Documents\vm_keys\private_ssh-key-2021-07-27.key
+hostname. 127.0.0.1
+mysql port. 3306
+ba
