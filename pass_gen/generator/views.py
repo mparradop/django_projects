@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import random
-
+import re
+import secrets
 
 # Create your views here.
 def home(request):
@@ -23,10 +24,13 @@ def password(request):
 		thepassword += random.choice(characters)
 
 	return render(request, 'generator/password.html', {'password':thepassword})
-"""
 
 
+def generate_pswd():
+	thepassword=""
+	pattern = re.compile("^[A-Za-z]|[0-9]|[#?!@$%^&*-]")
+	for c in range(20):
+		thepassword += secrets.choice(pattern)
+	print(thepassword)
+	return thepassword
 
-def home(request):
-	return HttpResponse('Hello there, a website running! Powered by django')
-"""
