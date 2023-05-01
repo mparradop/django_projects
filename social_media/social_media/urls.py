@@ -1,4 +1,4 @@
-"""anothersaas URL Configuration
+"""social_media URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -15,14 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main import views
-from to_do import views as todo_views
 
 urlpatterns = [
-    path('', views.main),
     path('admin/', admin.site.urls),
-    path('hello',views.hello),
-    path('to_do', todo_views.show_index, name='to_do'),
-    path('to_do/', todo_views.add_todo_view,name='add_todo'),
-
 ]

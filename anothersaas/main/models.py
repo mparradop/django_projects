@@ -27,6 +27,10 @@ class Company(models.Model):
 
     def __str__(self):
         return self.company_name
+    
+
+    class Meta:
+        verbose_name_plural = "company"
 
 
 class Category(models.Model):
@@ -43,6 +47,9 @@ class Status(models.Model):
     id_status = models.AutoField(primary_key=True, db_index=True)
     status_name = models.CharField("Name",max_length=100)
     description = models.CharField("Description",max_length=100)
+    
+    def __str__(self):
+        return self.status_name
 
 class Flag(models.Model):
     id_flag = models.AutoField(primary_key=True, db_index=True)
@@ -70,6 +77,9 @@ class Employee_Role(models.Model):
     role_name = models.CharField("Name",max_length=100)
     description = models.CharField("Description",max_length=100)
 
+    def __str__(self):
+        return self.role_name
+
 
 class Employee(models.Model):
     id_emp = models.AutoField(primary_key=True, db_index=True)
@@ -77,6 +87,8 @@ class Employee(models.Model):
     emp_last_name = models.CharField("Last Name",max_length=100)
     user_name = models.CharField("User name",max_length=100)
     role = models.ForeignKey(Employee_Role, on_delete=models.CASCADE)#,default=0)
+    def __str__(self):
+        return self.user_name
 
 
 class Org_team(models.Model):

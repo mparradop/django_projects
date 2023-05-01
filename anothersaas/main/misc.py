@@ -1,6 +1,5 @@
 import secrets
 import string
-import csv
 
 letters = string.ascii_letters
 digits = string.digits
