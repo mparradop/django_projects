@@ -20,3 +20,10 @@ def add_todo_view(request):
     Todo.objects.create(title=todo_title,status = todo_status,responsible=todo_responsible, description = todo_description)
 
     return redirect('to_do')
+
+def delete_todo(request):
+    task = Todo.objects.filter(id=request.post['todo_selected'])
+    task.delete()
+    return redirect('to_do')
+
+

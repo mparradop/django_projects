@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>To Do</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
   </head>
   <body>
     <section>
@@ -54,16 +56,19 @@
               <td>Status</td>
               <td>Created at</td>
               <td>Updated at</td>
+              <td>Action</td>
             </tr>
           </thead>
           <tbody>
             {% for todo in todo_list %}
             <tr>
               <td>{{todo.responsible}}</td>
-              <td>{{todo.title}}</td>
+              <td></td>
               <td>{{todo.status}}</td>
               <td>{{todo.created_at}}</td>
               <td>{{todo.updated_at}}</td>
+              <td><input type="checkbox" id="completed"><label for="completed">Done!</label></td>
+
             </tr>
             {% endfor %}
           </tbody>

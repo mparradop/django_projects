@@ -1,0 +1,79 @@
+body {
+    background-color: #EAEFF7;
+    font-family: Arial, sans-serif;
+  }
+  section {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    color: #2C3E50;
+    margin-bottom: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  label {
+    color: #2C3E50;
+  }
+  button {
+    background-color: #3498DB;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #2980B9;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+  th,
+  td {
+    padding: 10px;
+    text-align: center;
+  }
+  th {
+    background-color: #2C3E50;
+    color: #FFFFFF;
+  }
+  td {
+    background-color: #FFFFFF;
+    color: #2C3E50;
+  }
+  tr:nth-child(even) {
+    background-color: #F2F2F2;
+  }
+  tr:hover {
+    background-color: #F0FFFF;
+  }
+  footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  a {
+    color: #3498DB;
+    text-decoration: none;
+  }
